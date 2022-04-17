@@ -89,12 +89,6 @@ lvim.plugins = {
       require("user.neoscroll").config()
     end,
   },
-  {
-    "simrat39/symbols-outline.nvim",
-    config = function()
-      require("user.outline").config()
-    end,
-  },
   { "folke/todo-comments.nvim" },
   {
     "folke/trouble.nvim",
