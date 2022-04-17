@@ -11,48 +11,50 @@ an executable
 lvim.log.level = "warn"
 lvim.format_on_save = false
 lvim.colorscheme = "darkplus"
-require "user.settings"
-require "user.plugins"
-require "user.treesitter"
+require("user.settings")
+require("user.plugins")
+require("user.treesitter")
 
 -- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
 -- we use protected-mode (pcall) just in case the plugin wasn't loaded yet.
 local _, actions = pcall(require, "telescope.actions")
 lvim.builtin.telescope.defaults.mappings = {
-  -- for input mode
-  i = {
-    ["<C-j>"] = actions.move_selection_next,
-    ["<C-k>"] = actions.move_selection_previous,
-    ["<C-n>"] = actions.cycle_history_next,
-    ["<C-p>"] = actions.cycle_history_prev,
-  },
-  -- for normal mode
-  n = {
-    ["<C-j>"] = actions.move_selection_next,
-    ["<C-k>"] = actions.move_selection_previous,
-  },
+	-- for input mode
+	i = {
+		["<C-j>"] = actions.move_selection_next,
+		["<C-k>"] = actions.move_selection_previous,
+		["<C-n>"] = actions.cycle_history_next,
+		["<C-p>"] = actions.cycle_history_prev,
+	},
+	-- for normal mode
+	n = {
+		["<C-j>"] = actions.move_selection_next,
+		["<C-k>"] = actions.move_selection_previous,
+	},
 }
 
 -- Use which-key to add extra bindings with the leader-key prefix
 lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
 lvim.builtin.which_key.mappings["t"] = {
-  name = "+Trouble",
-  r = { "<cmd>Trouble lsp_references<cr>", "References" },
-  f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
-  d = { "<cmd>Trouble document_diagnostics<cr>", "Diagnostics" },
-  q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
-  l = { "<cmd>Trouble loclist<cr>", "LocationList" },
-  w = { "<cmd>Trouble workspace_diagnostics<cr>", "Wordspace Diagnostics" },
+	name = "+Trouble",
+	r = { "<cmd>Trouble lsp_references<cr>", "References" },
+	f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
+	d = { "<cmd>Trouble document_diagnostics<cr>", "Diagnostics" },
+	q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
+	l = { "<cmd>Trouble loclist<cr>", "LocationList" },
+	w = { "<cmd>Trouble workspace_diagnostics<cr>", "Wordspace Diagnostics" },
 }
 lvim.builtin.which_key.mappings["r"] = {
-  name = "Replace",
-  r = { "<cmd>lua require('spectre').open()<cr>", "Replace" },
-  w = { "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", "Replace Word" },
-  f = { "<cmd>lua require('spectre').open_file_search()<cr>", "Replace Buffer" },
+	name = "Replace",
+	r = { "<cmd>lua require('spectre').open()<cr>", "Replace" },
+	w = { "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", "Replace Word" },
+	f = { "<cmd>lua require('spectre').open_file_search()<cr>", "Replace Buffer" },
 }
 lvim.builtin.which_key.mappings["G"] = {
-  name = "Fugitive",
-  s = { "<cmd>Git<cr>", "Status" },
+	name = "+Fugitive",
+	s = { "<cmd>Git<cr>", "Status" },
+	c = { "<cmd>Git commit<cr>", "Commit" },
+	p = { "<cmd>Git push<cr>", "Commit" },
 }
 
 -- TODO: User Config for predefined plugins
@@ -65,10 +67,8 @@ lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.show_icons.git = 0
 lvim.builtin.which_key.active = true
 
-
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = "all"
-
 lvim.builtin.treesitter.ignore_install = { "haskell", "phpdoc" }
 lvim.builtin.treesitter.highlight.enabled = true
 
@@ -106,16 +106,16 @@ lvim.lsp.diagnostics.virtual_text = false
 -- end
 
 -- -- set a formatter, this will override the language server formatting capabilities (if it exists)
-local formatters = require "lvim.lsp.null-ls.formatters"
-formatters.setup {
-  {
-    command = "prettier",
-    filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
-    extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote", "--jsx-bracket-same-line" },
-  },
-  { command = "stylua", filetypes = { "lua" } },
-  { command = "black", filetypes = {"python"} }
-}
+local formatters = require("lvim.lsp.null-ls.formatters")
+formatters.setup({
+	{
+		command = "prettier",
+		filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+		extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote", "--jsx-bracket-same-line" },
+	},
+	{ command = "stylua", filetypes = { "lua" } },
+	{ command = "black", filetypes = { "python" } },
+})
 
 -- -- set additional linters
 -- local linters = require "lvim.lsp.null-ls.linters"
@@ -148,4 +148,4 @@ formatters.setup {
 -- lvim.autocommands.custom_groups = {
 --   { "BufWinEnter", "*.lua", "setlocal ts=8 sw=8" },
 -- }
-vim.cmd [[ au CmdWinEnter * quit ]]
+vim.cmd([[ au CmdWinEnter * quit ]])
