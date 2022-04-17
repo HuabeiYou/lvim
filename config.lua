@@ -54,7 +54,7 @@ lvim.builtin.which_key.mappings["G"] = {
 	name = "+Fugitive",
 	s = { "<cmd>Git<cr>", "Status" },
 	c = { "<cmd>Git commit<cr>", "Commit" },
-	p = { "<cmd>Git push<cr>", "Commit" },
+	p = { "<cmd>Git push<cr>", "Push" },
 }
 
 -- TODO: User Config for predefined plugins
