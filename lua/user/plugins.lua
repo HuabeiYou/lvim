@@ -78,7 +78,10 @@ lvim.plugins = {
 		"folke/trouble.nvim",
 		cmd = "TroubleToggle",
 	},
-	{ "windwp/nvim-ts-autotag" },
+	{
+		"windwp/nvim-ts-autotag",
+		event = "InsertEnter",
+	},
 	{
 		"sindrets/diffview.nvim",
 		event = "BufRead",
