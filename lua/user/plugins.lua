@@ -32,13 +32,6 @@ lvim.plugins = {
 		end,
 	},
 	{
-		"phaazon/hop.nvim",
-		event = "BufRead",
-		config = function()
-			require("user.hop").config()
-		end,
-	},
-	{
 		"andymass/vim-matchup",
 		event = "CursorMoved",
 		config = function()
@@ -105,6 +98,13 @@ lvim.plugins = {
 				},
 				lastplace_open_folds = true,
 			})
+		end,
+	},
+	{
+		"ggandor/lightspeed.nvim",
+		event = "BufRead",
+		config = function()
+			require("user.lightspeed").config()
 		end,
 	},
 }
