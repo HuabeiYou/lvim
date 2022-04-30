@@ -20,7 +20,3 @@ lvim.builtin.treesitter.textobjects = {
     },
   },
 }
-
-lvim.builtin.treesitter.autotag = {
-  enable = true
-}

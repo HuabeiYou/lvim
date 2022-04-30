@@ -72,6 +72,7 @@ lvim.builtin.which_key.active = true
 lvim.builtin.treesitter.ensure_installed = "all"
 lvim.builtin.treesitter.ignore_install = { "haskell", "phpdoc" }
 lvim.builtin.treesitter.highlight.enabled = true
+lvim.builtin.treesitter.autotag = { enable = true }
 
 lvim.builtin.telescope.defaults.path_display = { "smart" }
 lvim.builtin.project.patterns = { ".git" }
