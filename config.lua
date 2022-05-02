@@ -50,12 +50,6 @@ lvim.builtin.which_key.mappings["r"] = {
 	w = { "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", "Replace Word" },
 	f = { "<cmd>lua require('spectre').open_file_search()<cr>", "Replace Buffer" },
 }
-lvim.builtin.which_key.mappings["G"] = {
-	name = "+Fugitive",
-	s = { "<cmd>Git<cr>", "Status" },
-	c = { "<cmd>Git commit<cr>", "Commit" },
-	p = { "<cmd>Git push<cr>", "Push" },
-}
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
