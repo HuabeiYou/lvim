@@ -1,5 +1,13 @@
 lvim.plugins = {
 	{ "lunarvim/darkplus.nvim" },
+  { "rebelot/kanagawa.nvim" },
+	{
+		"catppuccin/nvim",
+		as = "catppuccin",
+		config = function()
+			vim.cmd([[ let g:catppuccin_flavour = 'mocha' ]])
+		end,
+	},
 	{ "nvim-treesitter/nvim-treesitter-textobjects" },
 	{
 		"filipdutescu/renamer.nvim",
@@ -49,7 +57,6 @@ lvim.plugins = {
 			require("user.dial").config()
 		end,
 	},
-	{ "norcalli/nvim-colorizer.lua" },
 	{
 		"windwp/nvim-spectre",
 		event = "BufRead",
@@ -102,6 +109,13 @@ lvim.plugins = {
 		event = "BufRead",
 		config = function()
 			require("user.lightspeed").config()
+		end,
+	},
+	{
+		"norcalli/nvim-colorizer.lua",
+		event = "BufRead",
+		config = function()
+			require("user.colorizer").config()
 		end,
 	},
 }
