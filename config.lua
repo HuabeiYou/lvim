@@ -87,6 +87,7 @@ lvim.lsp.diagnostics.virtual_text = false
 -- vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "pyright" })
 -- local opts = {} -- check the lspconfig documentation for a list of all possible options
 -- require("lvim.lsp.manager").setup("pyright", opts)
+vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "rust_analyzer" })
 
 -- ---remove a server from the skipped list, e.g. eslint, or emmet_ls. !!Requires `:LvimCacheReset` to take effect!!
 -- ---`:LvimInfo` lists which server(s) are skiipped for the current filetype
