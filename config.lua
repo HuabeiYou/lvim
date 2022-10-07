@@ -10,7 +10,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = false
-lvim.colorscheme = "darkplus"
+lvim.colorscheme = "tokyonight-moon"
 require("user.settings")
 require("user.plugins")
 require("user.treesitter")

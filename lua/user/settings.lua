@@ -1,4 +1,4 @@
-lvim.transparent_window = true
+lvim.transparent_window = false
 vim.opt.wrap = false
 lvim.debug = true
 vim.g.loaded_netrw = 1

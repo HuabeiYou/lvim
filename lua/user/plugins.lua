@@ -1,13 +1,6 @@
 lvim.plugins = {
 	{ "lunarvim/darkplus.nvim" },
-	{ "rebelot/kanagawa.nvim" },
-	{
-		"catppuccin/nvim",
-		as = "catppuccin",
-		config = function()
-			vim.cmd([[ let g:catppuccin_flavour = 'mocha' ]])
-		end,
-	},
+	{ "folke/tokyonight.nvim" },
 	{ "nvim-treesitter/nvim-treesitter-textobjects" },
 	{
 		"filipdutescu/renamer.nvim",
@@ -118,29 +111,29 @@ lvim.plugins = {
 			require("user.colorizer").config()
 		end,
 	},
-  {
-    "simrat39/rust-tools.nvim",
-    config = function()
-      require("rust-tools").setup {
-        tools = {
-          autoSetHints = true,
-          runnables = {
-            use_telescope = true,
-          },
-        },
-        server = {
-          on_init = require("lvim.lsp").common_on_init,
-          on_attach = function(client, bufnr)
-            require("lvim.lsp").common_on_attach(client, bufnr)
-            local rt = require "rust-tools"
-            -- Hover actions
-            vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
-            -- Code action groups
-            vim.keymap.set("n", "<leader>lA", rt.code_action_group.code_action_group, { buffer = bufnr })
-          end,
-        },
-      }
-    end,
-    ft = { "rust", "rs" },
-  },
+	{
+		"simrat39/rust-tools.nvim",
+		config = function()
+			require("rust-tools").setup({
+				tools = {
+					autoSetHints = true,
+					runnables = {
+						use_telescope = true,
+					},
+				},
+				server = {
+					on_init = require("lvim.lsp").common_on_init,
+					on_attach = function(client, bufnr)
+						require("lvim.lsp").common_on_attach(client, bufnr)
+						local rt = require("rust-tools")
+						-- Hover actions
+						vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
+						-- Code action groups
+						vim.keymap.set("n", "<leader>lA", rt.code_action_group.code_action_group, { buffer = bufnr })
+					end,
+				},
+			})
+		end,
+		ft = { "rust", "rs" },
+	},
 }
