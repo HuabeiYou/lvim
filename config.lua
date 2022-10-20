@@ -11,7 +11,7 @@ an executable
 lvim.log.level = "warn"
 lvim.format_on_save = false
 lvim.colorscheme = "gruvbox-material"
-vim.g.gruvbox_material_foreground = 'mix'
+vim.g.gruvbox_material_foreground = 'original'
 lvim.transparent_window = true
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
@@ -70,7 +70,8 @@ lvim.builtin.which_key.mappings["S"] = {
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
-lvim.builtin.notify.active = true
+require("user.alpha").config()
+lvim.builtin.notify.active = false
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = true
@@ -96,7 +97,7 @@ lvim.builtin.treesitter.highlight.enable = true
 lvim.builtin.treesitter.autotag.enable = true
 
 -- generic LSP settings
-lvim.lsp.diagnostics.virtual_text = false
+lvim.lsp.diagnostics.virtual_text = true
 
 -- -- make sure server will always be installed even if the server is in skipped_servers list
 -- lvim.lsp.installer.setup.ensure_installed = {
