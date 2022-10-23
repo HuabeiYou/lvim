@@ -7,8 +7,6 @@ a global executable or a path to
 an executable
 ]]
 
-vim.cmd [[set relativenumber]]
-
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = false
@@ -175,8 +173,8 @@ linters.setup {
 --   },
 -- }
 
--- Other setttings
--- require("user.settings")
+-- Other setttings using vim.cmd
+require("user.settings")
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- require("user.autocommands")
 
