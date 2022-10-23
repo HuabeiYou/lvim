@@ -177,9 +177,8 @@ linters.setup {
 
 -- Other setttings
 -- require("user.settings")
--- require("user.plugins")
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
-require("user.autocommands")
+-- require("user.autocommands")
 
 -- Additional Plugins
 lvim.plugins = {
