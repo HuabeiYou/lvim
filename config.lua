@@ -7,12 +7,13 @@ a global executable or a path to
 an executable
 ]]
 
+vim.cmd [[set relativenumber]]
+
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = false
-lvim.colorscheme = "gruvbox-material"
-vim.g.gruvbox_material_foreground = 'original'
-lvim.transparent_window = true
+lvim.colorscheme = "tokyonight-storm"
+lvim.transparent_window = false
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
@@ -71,7 +72,6 @@ lvim.builtin.which_key.mappings["S"] = {
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
 require("user.alpha").config()
-lvim.builtin.notify.active = false
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = true
@@ -97,7 +97,7 @@ lvim.builtin.treesitter.highlight.enable = true
 lvim.builtin.treesitter.autotag.enable = true
 
 -- generic LSP settings
-lvim.lsp.diagnostics.virtual_text = true
+lvim.lsp.diagnostics.virtual_text = false
 
 -- -- make sure server will always be installed even if the server is in skipped_servers list
 -- lvim.lsp.installer.setup.ensure_installed = {
@@ -183,8 +183,6 @@ require("user.autocommands")
 
 -- Additional Plugins
 lvim.plugins = {
-  { "lunarvim/darkplus.nvim" },
-  { "sainnhe/gruvbox-material" },
   {
     "tpope/vim-surround",
     setup = function()
@@ -195,7 +193,7 @@ lvim.plugins = {
   {
     "norcalli/nvim-colorizer.lua",
     config = function()
-      require("colorizer").setup({ "css", "scss", "html", "javascript" }, {
+      require("colorizer").setup({ '*' }, {
         RGB = true, -- #RGB hex codes
         RRGGBB = true, -- #RRGGBB hex codes
         RRGGBBAA = true, -- #RRGGBBAA hex codes
@@ -264,4 +262,5 @@ lvim.plugins = {
       vim.g.mkdp_auto_start = 1
     end,
   },
+  { "nvim-treesitter/nvim-treesitter-context" }
 }
