@@ -7,7 +7,7 @@ nightfox.setup({
 	palettes = {
 		nordfox = {
 			-- sel is different types of selection colors.
-			sel0 = "#3d59a1", -- Popup bg, visual selection bg
+			sel0 = "#243560", -- Popup bg, visual selection bg
 		},
 	},
 })
