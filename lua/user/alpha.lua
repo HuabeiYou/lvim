@@ -1,8 +1,5 @@
-local status_ok, alpha = pcall(require, "alpha")
-if not status_ok then
-	return
-end
-
+lvim.builtin.alpha.active = true
+lvim.builtin.alpha.mode = "startify"
 local banners = {}
 banners[1] = {
 	"⠀⠀⠀⠀⠀⠀⢀⣠⡾⠿⠛⠋⠉⠉⠉⠈⠉⠉⠙⠚⠫⢖⣤⡀⠀⠀⠀⠀⠀⠀",
@@ -128,6 +125,25 @@ banners[6] = {
 	"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⣆⠀⠀⠀⠀⠀⠀⢀⣀⣠⣤⣶⣾⣿⣿⣿⣿⣤⣄⣀⡀⠀⠀⠀⣿",
 	"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⢿⣻⣷⣶⣾⣿⣿⡿⢯⣛⣛⡋⠁⠀⠀⠉⠙⠛⠛⠿⣿⣿⡷⣶⣿",
 }
-lvim.builtin.alpha.active = true
-lvim.builtin.alpha.mode = "startify"
-lvim.builtin.alpha.startify.section.header.val = banners[math.random(1, #banners)]
+local startify = require("alpha.themes.startify")
+local fortune = require("alpha.fortune")
+startify.section.header.type = "group"
+startify.section.header.val = {
+	{
+		type = "text",
+		val = banners[math.random(1, #banners)],
+		opts = {
+			hl = "Type",
+			shrink_margin = false,
+		},
+	},
+	{
+		type = "text",
+		val = fortune({ max_width = 60 }),
+		opts = {
+			position = "left",
+			hl = "Statement",
+		},
+	},
+}
+lvim.builtin.alpha.startify.config = startify.config
