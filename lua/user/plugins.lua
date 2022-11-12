@@ -11,6 +11,7 @@ lvim.plugins = {
 	{ "tpope/vim-repeat" },
 	{ "monaqa/dial.nvim" },
 	{ "windwp/nvim-ts-autotag" },
+	{ "windwp/nvim-spectre" },
 	{
 		"folke/todo-comments.nvim",
 		event = "BufRead",
