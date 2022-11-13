@@ -12,6 +12,7 @@ lvim.plugins = {
 	{ "monaqa/dial.nvim" },
 	{ "windwp/nvim-ts-autotag" },
 	{ "windwp/nvim-spectre" },
+	{ "mickael-menu/zk-nvim" },
 	{
 		"folke/todo-comments.nvim",
 		event = "BufRead",
