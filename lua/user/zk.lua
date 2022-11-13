@@ -12,8 +12,9 @@ zk.setup({
 		config = {
 			cmd = { "zk", "lsp" },
 			name = "zk",
-			-- on_attach = ...
-			-- etc, see `:h vim.lsp.start_client()`
+			on_init = require("lvim.lsp").common_on_init,
+			capabilities = require("lvim.lsp").common_capabilities(),
+			on_attach = require("lvim.lsp").common_on_attach,
 		},
 		-- automatically attach buffers in a zk notebook that match the given filetypes
 		auto_attach = {
