@@ -11,7 +11,6 @@ reload("user.dial")
 reload("user.spectre")
 reload("user.zk")
 reload("user.bookmarks")
-print(lvim.colorscheme)
 if lvim.colorscheme == "gruvbox" then
 	reload("user.gruvbox")
 end
