@@ -10,8 +10,6 @@ lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = true
 lvim.builtin.project.active = true
--- Change theme settings
--- lvim.builtin.theme.options.style = "storm"
 
 vim.cmd([[set iskeyword+=-]])
 vim.cmd([[set relativenumber]])
