@@ -158,8 +158,8 @@ startify.section.header.val = {
 		type = "text",
 		val = fortune({ max_width = 60 }),
 		opts = {
+			hl = "Variable",
 			position = "left",
-			hl = "Statement",
 		},
 	},
 }
