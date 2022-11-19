@@ -19,6 +19,9 @@ gruvbox.setup({
 	contrast = "hard", -- can be "hard", "soft" or empty string
 	palette_overrides = {},
 	overrides = {
+		-- CursorLine = { bg = palette.dark0_soft },
+		-- Visual = { bg = palette.dark2 },
+		Visual = { bg = "#243560" },
 		BookmarkSign = { fg = palette.bright_orange },
 		GitSignsAdd = { fg = palette.bright_green, bg = "NONE" },
 		GitSignsChange = { fg = palette.bright_aqua, bg = "NONE" },
