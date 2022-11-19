@@ -2,8 +2,9 @@ local status_ok, gruvbox = pcall(require, "gruvbox")
 if not status_ok then
 	return
 end
+
+local palette = require("gruvbox.palette")
 -- setup must be called before loading the colorscheme
--- Default options:
 gruvbox.setup({
 	undercurl = true,
 	underline = true,
@@ -18,10 +19,15 @@ gruvbox.setup({
 	contrast = "hard", -- can be "hard", "soft" or empty string
 	palette_overrides = {},
 	overrides = {
-		BookmarkSign = { fg = "#ff9900" },
-		GitSignsAdd = { bg = "NONE" },
-		GitSignsChange = { bg = "NONE" },
-		GitSignsDelete = { bg = "NONE" },
+		BookmarkSign = { fg = palette.bright_orange },
+		GitSignsAdd = { fg = palette.bright_green, bg = "NONE" },
+		GitSignsChange = { fg = palette.bright_aqua, bg = "NONE" },
+		GitSignsDelete = { fg = palette.bright_red, bg = "NONE" },
+		DiagnosticSignHint = { fg = palette.bright_aqua, bg = "NONE" },
+		DiagnosticSignInfo = { fg = palette.bright_blue, bg = "NONE" },
+		DiagnosticSignWarn = { fg = palette.bright_yellow, bg = "NONE" },
+		DiagnosticSignError = { fg = palette.bright_red, bg = "NONE" },
+		DiagnosticSignOther = { bg = "NONE" },
 	},
 	dim_inactive = false,
 	transparent_mode = true,
