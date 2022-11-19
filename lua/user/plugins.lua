@@ -13,6 +13,7 @@ lvim.plugins = {
 	{ "windwp/nvim-ts-autotag" },
 	{ "windwp/nvim-spectre" },
 	{ "mickael-menu/zk-nvim" },
+	{ "MattesGroeger/vim-bookmarks" },
 	{
 		"folke/todo-comments.nvim",
 		event = "BufRead",
