@@ -24,4 +24,4 @@ nightfox.setup({
 	},
 })
 
-lvim.colorscheme = "nightfox"
+lvim.colorscheme = "nordfox"

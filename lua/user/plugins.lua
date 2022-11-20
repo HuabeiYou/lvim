@@ -1,8 +1,7 @@
 -- Additional Plugins
 lvim.plugins = {
 	{ "EdenEast/nightfox.nvim" },
-  { "ellisonleao/gruvbox.nvim" },
-  { "sainnhe/gruvbox-material" },
+	{ "luisiacc/gruvbox-baby" },
 	{ "nvim-treesitter/nvim-treesitter-context" },
 	{ "jose-elias-alvarez/typescript.nvim" },
 	{ "simrat39/rust-tools.nvim" },

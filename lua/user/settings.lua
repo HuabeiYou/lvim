@@ -2,8 +2,8 @@
 lvim.log.level = "warn"
 lvim.format_on_save = false
 lvim.transparent_window = true
+-- lvim.lsp.diagnostics.virtual_text = true
 
--- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"

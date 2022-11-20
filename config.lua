@@ -12,11 +12,12 @@ reload("user.dial")
 reload("user.spectre")
 reload("user.zk")
 reload("user.bookmarks")
+
 local colorscheme = "gruvbox"
-if colorscheme == "gruvbox-material" then
-	reload("user.gruvbox-material")
-elseif colorscheme == "nightfox" then
+if colorscheme == "gruvbox" then
+	reload("user.gruvbox-baby")
+elseif colorscheme == "nordfox" then
 	reload("user.nightfox")
-elseif colorscheme == "gruvbox" then
-	reload("user.gruvbox")
+else
+	lvim.colorscheme = "lunar"
 end
