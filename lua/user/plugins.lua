@@ -2,6 +2,7 @@
 lvim.plugins = {
 	{ "EdenEast/nightfox.nvim" },
   { "ellisonleao/gruvbox.nvim" },
+  { "sainnhe/gruvbox-material" },
 	{ "nvim-treesitter/nvim-treesitter-context" },
 	{ "jose-elias-alvarez/typescript.nvim" },
 	{ "simrat39/rust-tools.nvim" },

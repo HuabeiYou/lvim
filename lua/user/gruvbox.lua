@@ -36,3 +36,4 @@ gruvbox.setup({
 	transparent_mode = true,
 })
 vim.g.background = "dark"
+lvim.colorscheme = "gruvbox"

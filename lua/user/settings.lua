@@ -1,6 +1,5 @@
 -- general
 lvim.log.level = "warn"
-lvim.colorscheme = "gruvbox"
 lvim.format_on_save = false
 lvim.transparent_window = true
 

@@ -23,3 +23,5 @@ nightfox.setup({
 		},
 	},
 })
+
+lvim.colorscheme = "nightfox"
