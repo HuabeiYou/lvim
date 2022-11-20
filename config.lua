@@ -3,6 +3,7 @@ reload("user.keymapping")
 reload("user.lsp")
 reload("user.treesitter")
 reload("user.settings")
+reload("user.autocommands")
 reload("user.alpha")
 reload("user.whichkey")
 reload("user.telescope")
@@ -11,9 +12,11 @@ reload("user.dial")
 reload("user.spectre")
 reload("user.zk")
 reload("user.bookmarks")
-if lvim.colorscheme == "gruvbox" then
-	reload("user.gruvbox")
-end
-if lvim.colorscheme == "nightfox" then
+local colorscheme = "gruvbox"
+if colorscheme == "gruvbox-material" then
+	reload("user.gruvbox-material")
+elseif colorscheme == "nightfox" then
 	reload("user.nightfox")
+elseif colorscheme == "gruvbox" then
+	reload("user.gruvbox")
 end
