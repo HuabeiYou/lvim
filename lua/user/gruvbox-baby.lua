@@ -17,11 +17,8 @@ end
 --   use_original_palette = opt("use_original_palette", false),
 -- }
 vim.g.gruvbox_baby_background_color = "dark"
-vim.g.gruvbox_baby_transparent_mode = 1
+vim.g.gruvbox_baby_transparent_mode = true
 vim.g.gruvbox_baby_keyword_style = "NONE"
-vim.g.gruvbox_baby_color_overrides = {
-	soft_green = "#b8bb26",
-}
 -- Each highlight group must follow the structure:
 -- ColorGroup = {fg = "foreground color", bg = "background_color", style = "some_style(:h attr-list)"}
 -- example: {Normal = {fg = "#123123", bg = "NONE", style="underline"}}
