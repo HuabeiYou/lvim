@@ -30,6 +30,8 @@ local colors = require("gruvbox-baby.colors").config()
 vim.g.gruvbox_baby_highlights = {
 	Search = { fg = colors.background, bg = colors.medium_gray },
 	TSProperty = { fg = colors.foreground },
+  TSParameter = { fg = colors.light_blue, style = "nocombine" },
+	TSVariableBuiltin = { fg = colors.pink },
 	BookmarkSign = { fg = colors.orange },
 	BookmarkAnnotationSign = { fg = colors.orange },
 	DiagnosticHint = { fg = colors.forest_green },
@@ -38,7 +40,7 @@ vim.g.gruvbox_baby_highlights = {
 	DiagnosticUnderlineError = { sp = colors.error_red, style = "undercurl" },
 }
 vim.g.gruvbox_baby_color_overrides = {
-	blue_gray = "#69a7ba",
+	light_blue = "#83a598",
 	soft_green = "#b8bb26",
 }
 lvim.colorscheme = "gruvbox-baby"
