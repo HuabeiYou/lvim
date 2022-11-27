@@ -16,8 +16,9 @@ end
 --   transparent_mode = opt("transparent_mode", false),
 --   use_original_palette = opt("use_original_palette", false),
 -- }
+vim.g.background = "dark"
 vim.g.gruvbox_baby_background_color = "dark"
-vim.g.gruvbox_baby_transparent_mode = true
+vim.g.gruvbox_baby_transparent_mode = 1
 vim.g.gruvbox_baby_keyword_style = "NONE"
 -- Each highlight group must follow the structure:
 -- ColorGroup = {fg = "foreground color", bg = "background_color", style = "some_style(:h attr-list)"}
@@ -26,18 +27,25 @@ vim.g.gruvbox_baby_keyword_style = "NONE"
 local colors = require("gruvbox-baby.colors").config()
 vim.g.gruvbox_baby_highlights = {
 	Search = { fg = colors.background, bg = colors.medium_gray },
-	TSProperty = { fg = colors.foreground },
-  TSParameter = { fg = colors.light_blue, style = "nocombine" },
-	TSVariableBuiltin = { fg = colors.pink },
+	PmenuSel = { fg = colors.background, bg = "#458588" },
+	TSProperty = { fg = colors.dark_gray },
+	TSParameter = { fg = colors.dark_gray, style = "nocombine" },
+	TSVariableBuiltin = { fg = colors.magenta },
 	BookmarkSign = { fg = colors.orange },
 	BookmarkAnnotationSign = { fg = colors.orange },
 	DiagnosticHint = { fg = colors.forest_green },
 	DiagnosticUnderlineHint = { sp = colors.forest_green, style = "undercurl" },
 	DiagnosticUnderlineWarn = { sp = colors.soft_yellow, style = "undercurl" },
 	DiagnosticUnderlineError = { sp = colors.error_red, style = "undercurl" },
+	NvimTreeGitDirty = { fg = colors.soft_yellow },
+	NvimTreeGitStaged = { fg = colors.soft_green },
+	NvimTreeGitRenamed = { fg = colors.magenta },
+	NvimTreeGitNew = { fg = colors.clean_green },
 }
 vim.g.gruvbox_baby_color_overrides = {
-	light_blue = "#83a598",
+	blue_gray = colors.light_blue,
 	soft_green = "#b8bb26",
+	magenta = "#d3869b",
+	orange = "#fe8019",
 }
 lvim.colorscheme = "gruvbox-baby"

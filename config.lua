@@ -13,8 +13,9 @@ reload("user.spectre")
 reload("user.zk")
 reload("user.bookmarks")
 
-local colorscheme = "gruvbox"
-if colorscheme == "gruvbox" then
+-- lvim.transparent_window = true
+local colorscheme = "gruvboxbaby"
+if colorscheme == "gruvboxbaby" then
 	reload("user.gruvbox-baby")
 elseif colorscheme == "nordfox" then
 	reload("user.nightfox")

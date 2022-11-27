@@ -16,6 +16,23 @@ lvim.plugins = {
 	{ "mickael-menu/zk-nvim" },
 	{ "MattesGroeger/vim-bookmarks" },
 	{
+		"ggandor/leap.nvim",
+		config = function()
+			require("leap").add_default_mappings()
+		end,
+	},
+	{
+		"j-hui/fidget.nvim",
+		config = function()
+			require("fidget").setup()
+		end,
+	},
+	{
+		"turbio/bracey.vim",
+		cmd = { "Bracey", "BracyStop", "BraceyReload", "BraceyEval" },
+		run = "npm install --prefix server",
+	},
+	{
 		"folke/todo-comments.nvim",
 		event = "BufRead",
 		config = function()
