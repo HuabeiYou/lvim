@@ -150,7 +150,7 @@ startify.section.header.val = {
 		type = "text",
 		val = banners[math.random(1, #banners)],
 		opts = {
-			hl = "Type",
+			hl = "@parameter",
 			shrink_margin = false,
 		},
 	},
@@ -158,7 +158,7 @@ startify.section.header.val = {
 		type = "text",
 		val = fortune({ max_width = 60 }),
 		opts = {
-			hl = "Exception",
+			hl = "Comment",
 			position = "left",
 		},
 	},

@@ -8,10 +8,10 @@ formatters.setup({
 	{ command = "stylua", filetypes = { "lua" } },
 	{ command = "black", filetypes = { "python" } },
 })
-local linters = require("lvim.lsp.null-ls.linters")
-linters.setup({
-	{ command = "flake8", filetypes = { "python" } },
-})
+-- local linters = require("lvim.lsp.null-ls.linters")
+-- linters.setup({
+-- 	{ command = "flake8", filetypes = { "python" } },
+-- })
 
 require("user.lsp.typescript")
 require("user.lsp.python")
