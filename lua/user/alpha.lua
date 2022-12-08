@@ -150,7 +150,7 @@ startify.section.header.val = {
 		type = "text",
 		val = banners[math.random(1, #banners)],
 		opts = {
-			hl = "@parameter",
+			hl = "Type",
 			shrink_margin = false,
 		},
 	},
