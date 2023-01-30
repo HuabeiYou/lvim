@@ -5,6 +5,7 @@ lvim.plugins = {
 	{ "nvim-treesitter/nvim-treesitter-context" },
 	{ "jose-elias-alvarez/typescript.nvim" },
 	{ "simrat39/rust-tools.nvim" },
+	{ "mickael-menu/zk-nvim" },
 	{ "mfussenegger/nvim-dap-python" },
 	{ "mxsdev/nvim-dap-vscode-js" },
 	{ "f-person/git-blame.nvim" },
@@ -13,7 +14,6 @@ lvim.plugins = {
 	{ "monaqa/dial.nvim" },
 	{ "windwp/nvim-ts-autotag" },
 	{ "windwp/nvim-spectre" },
-	{ "mickael-menu/zk-nvim" },
 	{ "MattesGroeger/vim-bookmarks" },
 	{
 		"ggandor/leap.nvim",
@@ -30,7 +30,7 @@ lvim.plugins = {
 	{
 		"turbio/bracey.vim",
 		cmd = { "Bracey", "BracyStop", "BraceyReload", "BraceyEval" },
-		run = "npm install --prefix server",
+		build = "npm install --prefix server",
 	},
 	{
 		"folke/todo-comments.nvim",
@@ -72,7 +72,7 @@ lvim.plugins = {
 	{
 		"folke/persistence.nvim",
 		event = "BufReadPre", -- this will only start session saving when an actual file was opened
-		module = "persistence",
+		lazy = true,
 		config = function()
 			require("persistence").setup({
 				dir = vim.fn.expand(vim.fn.stdpath("config") .. "/session/"),
@@ -82,7 +82,7 @@ lvim.plugins = {
 	},
 	{
 		"iamcco/markdown-preview.nvim",
-		run = "cd app && npm install",
+		build = "cd app && npm install",
 		ft = "markdown",
 		config = function()
 			vim.g.mkdp_auto_start = 1

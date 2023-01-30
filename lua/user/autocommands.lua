@@ -10,7 +10,7 @@
 --     require("nvim-treesitter.highlight").attach(0, "bash")
 --   end,
 -- })
-function define_autocmds(definitions)
+local function define_autocmds(definitions)
 	for _, entry in ipairs(definitions) do
 		local event = entry[1]
 		local opts = entry[2]

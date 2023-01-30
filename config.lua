@@ -16,7 +16,7 @@ reload("user.bookmarks")
 -- lvim.transparent_window = true
 local colorscheme = "gruvboxbaby"
 if colorscheme == "gruvboxbaby" then
-	reload("user.gruvbox-baby")
+	reload("user.gruvboxbaby")
 elseif colorscheme == "nordfox" then
 	reload("user.nightfox")
 elseif colorscheme == "tokyonight" then
