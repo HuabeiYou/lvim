@@ -13,14 +13,8 @@ reload("user.spectre")
 reload("user.zk")
 reload("user.bookmarks")
 
--- lvim.transparent_window = true
-local colorscheme = "gruvboxbaby"
-if colorscheme == "gruvboxbaby" then
-	reload("user.gruvboxbaby")
-elseif colorscheme == "nordfox" then
-	reload("user.nightfox")
-elseif colorscheme == "tokyonight" then
-	reload("user.tokyonight")
-else
+local colorscheme = "gruvbox-baby"
+local status_ok, _ = pcall(require, "user." .. colorscheme)
+if not status_ok then
 	lvim.colorscheme = colorscheme
 end
