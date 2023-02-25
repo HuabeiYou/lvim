@@ -105,6 +105,7 @@ local banners = {
 		"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠒⠒⠤⠤⠤⠤⠤⠤⠶⠶⠶⠟⠛⠋⠉⠀⠀⠀⠀⠀⠀⠀",
 	},
 }
+math.randomseed(math.floor(os.clock() * 1e6))
 local startify = require("alpha.themes.startify")
 local fortune = require("alpha.fortune")
 startify.section.header.type = "group"
