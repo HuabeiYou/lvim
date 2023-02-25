@@ -15,6 +15,7 @@ lvim.plugins = {
 	{ "windwp/nvim-ts-autotag" },
 	{ "windwp/nvim-spectre" },
 	{ "MattesGroeger/vim-bookmarks" },
+	{ "lvimuser/lsp-inlayhints.nvim" },
 	{
 		"ggandor/leap.nvim",
 		config = function()

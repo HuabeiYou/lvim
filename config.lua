@@ -12,6 +12,7 @@ reload("user.dial")
 reload("user.spectre")
 reload("user.zk")
 reload("user.bookmarks")
+reload("user.inlay-hints")
 
 local colorscheme = "gruvbox-baby"
 local status_ok, _ = pcall(require, "user." .. colorscheme)

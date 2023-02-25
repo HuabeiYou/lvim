@@ -18,7 +18,7 @@ end
 -- }
 vim.g.background = "dark"
 vim.g.gruvbox_baby_background_color = "dark"
-vim.g.gruvbox_baby_transparent_mode = 1
+vim.g.gruvbox_baby_transparent_mode = 0
 -- vim.g.gruvbox_baby_keyword_style = "NONE"
 -- Each highlight group must follow the structure:
 -- ColorGroup = {fg = "foreground color", bg = "background_color", style = "some_style(:h attr-list)"}
@@ -26,6 +26,7 @@ vim.g.gruvbox_baby_transparent_mode = 1
 -- See also :h highlight-guifg
 local colors = require("gruvbox-baby.colors").config()
 vim.g.gruvbox_baby_color_overrides = {
+	background = "#1d2022",
 	blue_gray = colors.light_blue,
 	soft_green = "#B8BB26",
 	magenta = "#D3869B",
@@ -40,6 +41,7 @@ vim.g.gruvbox_baby_highlights = {
 	BookmarkSign = { fg = colors.orange },
 	BookmarkAnnotationSign = { fg = colors.orange },
 	DiagnosticHint = { fg = colors.forest_green },
+	LspInlayHint = { fg = colors.comment },
 	DiagnosticUnderlineHint = { sp = colors.forest_green, style = "undercurl" },
 	DiagnosticUnderlineWarn = { sp = colors.soft_yellow, style = "undercurl" },
 	DiagnosticUnderlineError = { sp = colors.error_red, style = "undercurl" },
