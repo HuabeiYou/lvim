@@ -26,7 +26,7 @@ vim.g.gruvbox_baby_transparent_mode = 0
 -- See also :h highlight-guifg
 local colors = require("gruvbox-baby.colors").config()
 vim.g.gruvbox_baby_color_overrides = {
-	background = "#1d2022",
+	-- background = "#1d2022",
 	blue_gray = colors.light_blue,
 	soft_green = "#B8BB26",
 	magenta = "#D3869B",
