@@ -14,10 +14,10 @@ reload("user.zk")
 reload("user.bookmarks")
 reload("user.inlay-hints")
 
-local colorscheme = "gruvbox-baby"
--- local colorscheme = "base16-vim"
+-- lvim.transparent_window = true
+local colorscheme = "gruvbox-material"
+-- local colorscheme = "base16-gruvbox-dark-hard"
 local status_ok, _ = pcall(require, "user." .. colorscheme)
 if not status_ok then
 	lvim.colorscheme = colorscheme
 end
--- lvim.transparent_window = true

@@ -1,7 +1,7 @@
 -- Additional Plugins
 lvim.plugins = {
+	{ "sainnhe/gruvbox-material" },
 	{ "RRethy/nvim-base16" },
-	{ "tinted-theming/base16-vim" },
 	{ "EdenEast/nightfox.nvim" },
 	{ "luisiacc/gruvbox-baby" },
 	{ "nvim-treesitter/nvim-treesitter-context" },
