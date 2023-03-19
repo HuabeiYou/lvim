@@ -1,7 +1,7 @@
-vim.api.nvim_create_autocmd("BufEnter", {
-	pattern = { "*.json", "*.jsonc", "*.md" },
-	command = "setlocal wrap",
-})
+-- vim.api.nvim_create_autocmd("BufEnter", {
+-- 	pattern = { "*.json", "*.jsonc", "*.md" },
+-- 	command = "setlocal wrap",
+-- })
 -- vim.api.nvim_create_autocmd("FileType", {
 --   pattern = "zsh",
 --   callback = function()
