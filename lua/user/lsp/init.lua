@@ -14,7 +14,7 @@ formatters.setup({
 	{ command = "google_java_format", filetypes = { "java" } },
 })
 
-local linters = require("lvim.lsp.null-ls.linters")
-linters.setup({
-	{ command = "flake8", filetypes = { "python" } },
-})
+-- local linters = require("lvim.lsp.null-ls.linters")
+-- linters.setup({
+-- 	{ command = "flake8", filetypes = { "python" } },
+-- })

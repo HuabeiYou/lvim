@@ -12,7 +12,6 @@ reload("user.dial")
 reload("user.spectre")
 reload("user.zk")
 reload("user.bookmarks")
-reload("user.inlay-hints")
 
 -- lvim.transparent_window = true
 local colorscheme = "gruvbox-baby"
