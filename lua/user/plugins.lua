@@ -18,12 +18,7 @@ lvim.plugins = {
 	{ "windwp/nvim-spectre" },
 	{ "MattesGroeger/vim-bookmarks" },
 	{ "lvimuser/lsp-inlayhints.nvim" },
-	{
-		"kiyoon/jupynium.nvim",
-		build = "pip install --user .",
-		-- build = "conda run --no-capture-output -n jupynium pip install .",
-		-- enabled = vim.fn.isdirectory(vim.fn.expand "~/miniconda3/envs/jupynium"),
-	},
+	{ "luk400/vim-jukit", ft = { "python", "ipynb" } },
 	{
 		"ggandor/leap.nvim",
 		config = function()
