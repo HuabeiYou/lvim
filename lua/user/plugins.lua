@@ -18,7 +18,8 @@ lvim.plugins = {
 	{ "windwp/nvim-spectre" },
 	{ "MattesGroeger/vim-bookmarks" },
 	{ "lvimuser/lsp-inlayhints.nvim" },
-	{ "luk400/vim-jukit", ft = { "python", "ipynb" } },
+	{ "tpope/vim-fugitive" },
+	{ "luk400/vim-jukit", ft = { "python", "ipynb", "jupyter notebook" } },
 	{
 		"ggandor/leap.nvim",
 		config = function()
