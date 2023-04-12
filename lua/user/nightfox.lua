@@ -5,7 +5,7 @@ end
 
 nightfox.setup({
 	options = {
-		transparent = true,
+		transparent = false,
 	},
 	palettes = {
 		nordfox = {
@@ -24,4 +24,4 @@ nightfox.setup({
 	},
 })
 
-lvim.colorscheme = "nordfox"
+lvim.colorscheme = "nightfox"

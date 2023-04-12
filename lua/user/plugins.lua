@@ -1,7 +1,7 @@
 -- Additional Plugins
 lvim.plugins = {
 	{ "sainnhe/gruvbox-material" },
-	{ "RRethy/nvim-base16" },
+	{ "tinted-theming/base16-vim" },
 	{ "EdenEast/nightfox.nvim" },
 	{ "luisiacc/gruvbox-baby" },
 	{ "nvim-treesitter/nvim-treesitter-context" },
@@ -19,7 +19,7 @@ lvim.plugins = {
 	{ "MattesGroeger/vim-bookmarks" },
 	{ "lvimuser/lsp-inlayhints.nvim" },
 	{ "tpope/vim-fugitive" },
-	{ "luk400/vim-jukit", ft = { "python", "ipynb", "jupyter notebook" } },
+	{ "luk400/vim-jukit", ft = { "python" } },
 	{
 		"ggandor/leap.nvim",
 		config = function()
