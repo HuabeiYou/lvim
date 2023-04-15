@@ -27,7 +27,7 @@ vim.g.gruvbox_baby_transparent_mode = 0
 local colors = require("gruvbox-baby.colors").config()
 vim.g.gruvbox_baby_color_overrides = {
 	blue_gray = colors.light_blue,
-	soft_green = "#b0b846",
+	soft_green = "#B8BB26",
 	magenta = "#D3869B",
 	orange = "#FE8019",
 }
