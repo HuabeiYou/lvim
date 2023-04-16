@@ -26,10 +26,10 @@ zk.setup({
 
 lvim.builtin.which_key.mappings["z"] = {
 	name = "zk",
-	c = { "<Cmd>ZkNew { title = vim.fn.input('Title: ') }<CR>", "Create a new note after asking for its title" },
-	o = { "<Cmd>ZkNotes { sort = { 'modified' } }<CR>", "Open notes" },
-	s = { "<Cmd>ZkNotes { sort = { 'modified' }, match = vim.fn.input('Search: ') }<CR>", "Search notes" },
-	t = { "<Cmd>ZkTags<CR>", "Open notes associated with the selected tags" },
-	b = { "<Cmd>ZkBacklinks<CR>", "Open notes linking to the current buffer." },
-	l = { "<Cmd>ZkLinks<CR>", "Open notes linked by the current buffer." },
+	c = { ":ZkNew { title = vim.fn.input('Title: ') }<CR>", "Create a new note after asking for its title" },
+	o = { ":ZkNotes { sort = { 'modified' } }<CR>", "Open notes" },
+	s = { ":ZkNotes { sort = { 'modified' }, match = vim.fn.input('Search: ') }<CR>", "Search notes" },
+	t = { ":ZkTags<CR>", "Open notes associated with the selected tags" },
+	b = { ":ZkBacklinks<CR>", "Open notes linking to the current buffer." },
+	l = { ":ZkLinks<CR>", "Open notes linked by the current buffer." },
 }

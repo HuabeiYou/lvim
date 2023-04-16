@@ -24,6 +24,13 @@ lvim.plugins = {
 	"j-hui/fidget.nvim",
 	"nacro90/numb.nvim",
 	"folke/todo-comments.nvim",
+	{
+		"ThePrimeagen/refactoring.nvim",
+		dependencies = {
+			{ "nvim-lua/plenary.nvim" },
+			{ "nvim-treesitter/nvim-treesitter" },
+		},
+	},
 	{ "luk400/vim-jukit", ft = { "python" } },
 	{
 		"ggandor/leap.nvim",

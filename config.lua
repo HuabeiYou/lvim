@@ -12,6 +12,7 @@ reload("user.spectre")
 reload("user.zk")
 reload("user.bookmarks")
 reload("user.smoothie")
+reload("user.refactoring")
 reload("user.whichkey")
 
 local colorscheme = "gruvbox"
