@@ -2,7 +2,6 @@
 lvim.plugins = {
 	"luisiacc/gruvbox-baby",
 	"ellisonleao/gruvbox.nvim",
-	"sainnhe/gruvbox-material",
 	"tinted-theming/base16-vim",
 	"nvim-treesitter/nvim-treesitter-context",
 	"nvim-treesitter/playground",
@@ -23,7 +22,12 @@ lvim.plugins = {
 	"opalmay/vim-smoothie",
 	"j-hui/fidget.nvim",
 	"nacro90/numb.nvim",
-	"folke/todo-comments.nvim",
+	{
+		"folke/todo-comments.nvim",
+		config = function()
+			require("todo-comments").setup({})
+		end,
+	},
 	{
 		"ThePrimeagen/refactoring.nvim",
 		dependencies = {
@@ -31,7 +35,7 @@ lvim.plugins = {
 			{ "nvim-treesitter/nvim-treesitter" },
 		},
 	},
-	{ "luk400/vim-jukit", ft = { "python" } },
+	{ "luk400/vim-jukit", ft = { "python", "json" } },
 	{
 		"ggandor/leap.nvim",
 		config = function()
