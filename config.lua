@@ -13,6 +13,7 @@ reload("user.zk")
 reload("user.bookmarks")
 reload("user.smoothie")
 reload("user.refactoring")
+reload("user.orgmode")
 reload("user.whichkey")
 
 local colorscheme = "gruvbox"

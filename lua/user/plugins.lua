@@ -22,6 +22,7 @@ lvim.plugins = {
 	"opalmay/vim-smoothie",
 	"j-hui/fidget.nvim",
 	"nacro90/numb.nvim",
+	"nvim-orgmode/orgmode",
 	{
 		"folke/todo-comments.nvim",
 		config = function()

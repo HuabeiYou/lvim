@@ -36,6 +36,6 @@ gruvbox.setup({
 		-- ["@constructor"] = { link = "Define" },
 	},
 	dim_inactive = false,
-	transparent_mode = true,
+	transparent_mode = false,
 })
 lvim.colorscheme = "gruvbox"

@@ -1,6 +1,6 @@
 require("user.lsp.rust")
 lvim.format_on_save = false
-lvim.lsp.diagnostics.virtual_text = false
+vim.diagnostic.config({ virtual_text = false })
 lvim.lsp.installer.setup.automatic_installation = false
 
 local formatters = require("lvim.lsp.null-ls.formatters")
