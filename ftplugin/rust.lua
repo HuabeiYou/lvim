@@ -1,3 +1,8 @@
+local formatters = require("lvim.lsp.null-ls.formatters")
+formatters.setup({
+	{ command = "rustfmt", filetypes = { "rust" } },
+})
+
 local status_ok, which_key = pcall(require, "which-key")
 if not status_ok then
 	return

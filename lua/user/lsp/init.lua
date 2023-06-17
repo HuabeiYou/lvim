@@ -1,17 +1,24 @@
-require("user.lsp.rust")
+vim.diagnostic.config({ virtual_text = true })
 lvim.format_on_save = false
-vim.diagnostic.config({ virtual_text = false })
 lvim.lsp.installer.setup.automatic_installation = false
 
 local formatters = require("lvim.lsp.null-ls.formatters")
 formatters.setup({
-	{ command = "prettier", filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact", "css" } },
-	{ command = "black", filetypes = { "python" } },
-	{ command = "stylua", filetypes = { "lua" } },
-	{ command = "goimports", filetypes = { "go" } },
-	{ command = "gofumpt", filetypes = { "go" } },
+	{
+		command = "prettier",
+		filetypes = {
+			"javascript",
+			"typescript",
+			"javascriptreact",
+			"typescriptreact",
+			"json",
+			"css",
+			"less",
+			"scss",
+		},
+	},
 	{ command = "shfmt", filetypes = { "sh", "zsh", "bash" } },
-	{ command = "google_java_format", filetypes = { "java" } },
+	{ command = "clang-format", filetypes = { "c", "cpp" }, extra_args = { "--style", "Google" } },
 })
 
 -- local linters = require("lvim.lsp.null-ls.linters")

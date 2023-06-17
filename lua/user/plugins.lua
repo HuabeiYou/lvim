@@ -3,11 +3,15 @@ lvim.plugins = {
 	"luisiacc/gruvbox-baby",
 	"ellisonleao/gruvbox.nvim",
 	"tinted-theming/base16-vim",
+	"rebelot/kanagawa.nvim",
 	"nvim-treesitter/nvim-treesitter-context",
 	"nvim-treesitter/playground",
 	"jose-elias-alvarez/typescript.nvim",
 	"simrat39/rust-tools.nvim",
 	"mickael-menu/zk-nvim",
+	"nvim-neotest/neotest",
+	"nvim-neotest/neotest-python",
+	"nvim-neotest/neotest-jest",
 	"mfussenegger/nvim-dap-python",
 	"mxsdev/nvim-dap-vscode-js",
 	"f-person/git-blame.nvim",
@@ -23,6 +27,7 @@ lvim.plugins = {
 	"j-hui/fidget.nvim",
 	"nacro90/numb.nvim",
 	"nvim-orgmode/orgmode",
+	"dhruvasagar/vim-table-mode",
 	{
 		"folke/todo-comments.nvim",
 		config = function()
@@ -36,7 +41,6 @@ lvim.plugins = {
 			{ "nvim-treesitter/nvim-treesitter" },
 		},
 	},
-	{ "luk400/vim-jukit", ft = { "python", "json" } },
 	{
 		"ggandor/leap.nvim",
 		config = function()
