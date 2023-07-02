@@ -16,6 +16,7 @@ reload("user.smoothie")
 reload("user.refactoring")
 reload("user.orgmode")
 reload("user.whichkey")
+reload("user.table-mode")
 
 local colorscheme = "kanagawa"
 local status_ok, _ = pcall(require, "user." .. colorscheme)

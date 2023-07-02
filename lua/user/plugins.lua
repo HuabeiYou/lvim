@@ -29,6 +29,12 @@ lvim.plugins = {
 	"nvim-orgmode/orgmode",
 	"dhruvasagar/vim-table-mode",
 	{
+		"akinsho/org-bullets.nvim",
+		config = function()
+			require("org-bullets").setup()
+		end,
+	},
+	{
 		"folke/todo-comments.nvim",
 		config = function()
 			require("todo-comments").setup({})
