@@ -1,5 +1,5 @@
 vim.diagnostic.config({ virtual_text = true })
-lvim.lsp.installer.setup.automatic_installation = true
+lvim.lsp.installer.setup.automatic_installation = false
 lvim.format_on_save.enabled = true
 lvim.format_on_save.pattern = { "*.lua", "*.py" }
 
@@ -21,8 +21,3 @@ formatters.setup({
 	{ command = "shfmt", filetypes = { "sh", "zsh", "bash" } },
 	{ command = "clang-format", filetypes = { "c", "cpp" }, extra_args = { "--style", "Google" } },
 })
-
--- local linters = require("lvim.lsp.null-ls.linters")
--- linters.setup({
--- 	{ command = "flake8", filetypes = { "python" } },
--- })

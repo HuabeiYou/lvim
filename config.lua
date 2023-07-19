@@ -18,7 +18,7 @@ reload("user.orgmode")
 reload("user.whichkey")
 reload("user.table-mode")
 
-local colorscheme = "kanagawa"
+local colorscheme = "tokyonight-moon"
 local status_ok, _ = pcall(require, "user." .. colorscheme)
 if not status_ok then
 	lvim.colorscheme = colorscheme
