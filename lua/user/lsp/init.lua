@@ -1,5 +1,4 @@
 vim.diagnostic.config({ virtual_text = true })
-lvim.lsp.installer.setup.automatic_installation = false
 lvim.format_on_save.enabled = true
 lvim.format_on_save.pattern = { "*.lua", "*.py" }
 

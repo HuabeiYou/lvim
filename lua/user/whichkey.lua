@@ -16,3 +16,5 @@ lvim.builtin.which_key.mappings["t"] = {
 	l = { "<cmd>Trouble loclist<cr>", "LocationList" },
 	w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics" },
 }
+
+lvim.builtin.which_key.mappings["w"] = nil

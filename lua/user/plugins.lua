@@ -1,12 +1,10 @@
 -- Additional Plugins
 lvim.plugins = {
-	"luisiacc/gruvbox-baby",
-	"ellisonleao/gruvbox.nvim",
 	"tinted-theming/base16-vim",
-	"rebelot/kanagawa.nvim",
+	"ellisonleao/gruvbox.nvim",
+	"luisiacc/gruvbox-baby",
 	"nvim-treesitter/nvim-treesitter-context",
 	"nvim-treesitter/playground",
-	"jose-elias-alvarez/typescript.nvim",
 	"simrat39/rust-tools.nvim",
 	"mickael-menu/zk-nvim",
 	"nvim-neotest/neotest",
@@ -14,8 +12,6 @@ lvim.plugins = {
 	"nvim-neotest/neotest-jest",
 	"mfussenegger/nvim-dap-python",
 	"mxsdev/nvim-dap-vscode-js",
-	"f-person/git-blame.nvim",
-	"tpope/vim-surround",
 	"tpope/vim-repeat",
 	"tpope/vim-fugitive",
 	"monaqa/dial.nvim",
@@ -25,8 +21,32 @@ lvim.plugins = {
 	"lvimuser/lsp-inlayhints.nvim",
 	"opalmay/vim-smoothie",
 	"nacro90/numb.nvim",
-	"nvim-orgmode/orgmode",
 	"dhruvasagar/vim-table-mode",
+	{
+		"nvim-orgmode/orgmode",
+		dependencies = {
+			{ "nvim-treesitter/nvim-treesitter", lazy = true },
+		},
+		event = "VeryLazy",
+		config = function()
+			require("user.orgmode")
+		end,
+	},
+	{
+		"folke/trouble.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		opts = {},
+	},
+	{
+		"kylechui/nvim-surround",
+		version = "*", -- Use for stability; omit to use `main` branch for the latest features
+		event = "VeryLazy",
+		config = function()
+			require("nvim-surround").setup({
+				-- Configuration here, or leave empty to use defaults
+			})
+		end,
+	},
 	{
 		"akinsho/org-bullets.nvim",
 		config = function()
