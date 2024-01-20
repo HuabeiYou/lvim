@@ -15,7 +15,6 @@ lvim.plugins = {
 	"monaqa/dial.nvim",
 	"windwp/nvim-ts-autotag",
 	"windwp/nvim-spectre",
-	"MattesGroeger/vim-bookmarks",
 	"lvimuser/lsp-inlayhints.nvim",
 	"opalmay/vim-smoothie",
 	"nacro90/numb.nvim",
