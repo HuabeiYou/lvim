@@ -7,6 +7,7 @@ lvim.builtin.nvimtree.setup.renderer.icons.show.git = true
 lvim.builtin.project.active = true
 lvim.builtin.treesitter.rainbow.enable = true
 lvim.builtin.dap.active = false
+lvim.builtin.bufferline.active = false
 
 vim.g.skip_ts_context_commentstring_module = true
 

@@ -1,3 +1,7 @@
+lvim.builtin.which_key.mappings["c"] = nil
+lvim.builtin.which_key.mappings["w"] = nil
+lvim.builtin.which_key.mappings["q"] = nil
+
 lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
 
 lvim.builtin.which_key.mappings["S"] = {
@@ -15,6 +19,19 @@ lvim.builtin.which_key.mappings["t"] = {
 	q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
 	l = { "<cmd>Trouble loclist<cr>", "LocationList" },
 	w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics" },
+	m = { "<cmd>TableModeToggle<cr>", "Toggle Table Mode" },
 }
 
-lvim.builtin.which_key.mappings["w"] = nil
+lvim.builtin.which_key.mappings["C"] = {
+	name = "Python",
+	c = { "<cmd>lua require('swenv.api').pick_venv()<cr>", "Choose Env" },
+}
+
+lvim.builtin.which_key.mappings["b"] = {
+	name = "Buffers",
+	f = { "<cmd>Telescope buffers previewer=false<cr>", "Find" },
+	n = { "<cmd>bnext<cr>", "Next Buffer" },
+	p = { "<cmd>bprevious<cr>", "Previous Buffer" },
+	x = { "<cmd>bdelete<cr>", "Close Buffer" },
+	w = { "<cmd>noautocmd w<cr>", "Save without formatting (noautocmd)" },
+}

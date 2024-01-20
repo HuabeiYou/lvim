@@ -1,8 +1,6 @@
 -- Additional Plugins
 lvim.plugins = {
-	"tinted-theming/base16-vim",
 	"ellisonleao/gruvbox.nvim",
-	"luisiacc/gruvbox-baby",
 	"nvim-treesitter/nvim-treesitter-context",
 	"nvim-treesitter/playground",
 	"simrat39/rust-tools.nvim",
@@ -22,6 +20,22 @@ lvim.plugins = {
 	"opalmay/vim-smoothie",
 	"nacro90/numb.nvim",
 	"dhruvasagar/vim-table-mode",
+	"stevearc/dressing.nvim",
+	{
+		"ThePrimeagen/harpoon",
+		branch = "harpoon2",
+		dependencies = { "nvim-lua/plenary.nvim" },
+	},
+	{
+		"AckslD/swenv.nvim",
+		config = function()
+			require("swenv").setup({
+				post_set_venv = function()
+					vim.cmd("LspRestart")
+				end,
+			})
+		end,
+	},
 	{
 		"nvim-orgmode/orgmode",
 		dependencies = {

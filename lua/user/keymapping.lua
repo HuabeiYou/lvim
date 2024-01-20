@@ -6,6 +6,10 @@ lvim.leader = "space"
 -- vim.keymap.del("n", "<C-Up>")
 -- override a default keymapping
 -- lvim.keys.normal_mode["<C-q>"] = ":q<cr>" -- or vim.keymap.set("n", "<C-q>", ":q<cr>" )
+
+-- vim.keymap.del("n", "<C-h>")
+-- vim.keymap.del("n", "<C-l>")
+-- vim.keymap.del("n", "<C-j>")
+-- vim.keymap.del("n", "<C-k>")
+
 lvim.keys.insert_mode["jk"] = "<Esc>"
-lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
-lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"

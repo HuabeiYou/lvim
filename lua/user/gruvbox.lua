@@ -43,6 +43,6 @@ gruvbox.setup({
 		GruvboxAquaSign = { bg = "" },
 	},
 	dim_inactive = false,
-	transparent_mode = false,
+	transparent_mode = true,
 })
 lvim.colorscheme = "gruvbox"
